@@ -24,5 +24,5 @@ try{
         }
     }
 }catch(Exception $e){
-    
+    //log exception
 }
