@@ -8,7 +8,7 @@ require_once("foursquare-venues.php");
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Foursquare Venus near New York (40.7,-74)</title>
+        <title>Foursquare Venus</title>
 
         <!-- Bootstrap core CSS -->
         <link href="extensions/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +22,7 @@ require_once("foursquare-venues.php");
         
         <div role="main" class="container theme-showcase main-wrapper">
 
-            <h1>Foursquare Venues</h1>
+            <h1>Foursquare Venues near New York(40.7,-74)</h1>
             
             <?php
             //initializing foursquare
