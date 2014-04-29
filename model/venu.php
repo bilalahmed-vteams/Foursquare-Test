@@ -78,20 +78,20 @@ class Venu extends DB {
                     VALUES 
                         (
                         '".(isset($data['id']) ? $data['id']:NULL )."',
-                        '".mysql_real_escape_string((isset($data['name']) ? $data['name']:NULL ))."',
-                        '".mysql_real_escape_string((isset($data['contact']['phone']) ? $data['contact']['phone']:NULL ))."',
-                        '".mysql_real_escape_string((isset($data['contact']['formattedPhone']) ? $data['contact']['formattedPhone']:NULL ))."',
-                        '".mysql_real_escape_string((isset($data['location']['address']) ? $data['location']['address']:NULL ))."',
-                        '".mysql_real_escape_string((isset($data['location']['crossStreet']) ? $data['location']['crossStreet']:NULL ))."',
-                        '".mysql_real_escape_string((isset($data['location']['lat']) ? $data['location']['lat']:NULL ))."',
-                        '".mysql_real_escape_string((isset($data['location']['lng']) ? $data['location']['lng']:NULL ))."',
-                        '".mysql_real_escape_string((isset($data['location']['distance']) ? $data['location']['distance']:NULL ))."',
-                        '".mysql_real_escape_string((isset($data['location']['postalCode']) ? $data['location']['postalCode']:NULL ))."',
-                        '".mysql_real_escape_string((isset($data['location']['city']) ? $data['location']['city']:NULL ))."',
-                        '".mysql_real_escape_string((isset($data['location']['state']) ? $data['location']['state']:NULL ))."',
-                        '".mysql_real_escape_string((isset($data['location']['country']) ? $data['location']['country']:NULL ))."',
-                        '".mysql_real_escape_string((isset($data['verified']) ? $data['verified']:NULL ))."',
-                        '".mysql_real_escape_string((isset($data['url']) ? $data['url']:NULL ))."',
+                        '".addslashes((isset($data['name']) ? $data['name']:NULL ))."',
+                        '".addslashes((isset($data['contact']['phone']) ? $data['contact']['phone']:NULL ))."',
+                        '".addslashes((isset($data['contact']['formattedPhone']) ? $data['contact']['formattedPhone']:NULL ))."',
+                        '".addslashes((isset($data['location']['address']) ? $data['location']['address']:NULL ))."',
+                        '".addslashes((isset($data['location']['crossStreet']) ? $data['location']['crossStreet']:NULL ))."',
+                        '".addslashes((isset($data['location']['lat']) ? $data['location']['lat']:NULL ))."',
+                        '".addslashes((isset($data['location']['lng']) ? $data['location']['lng']:NULL ))."',
+                        '".addslashes((isset($data['location']['distance']) ? $data['location']['distance']:NULL ))."',
+                        '".addslashes((isset($data['location']['postalCode']) ? $data['location']['postalCode']:NULL ))."',
+                        '".addslashes((isset($data['location']['city']) ? $data['location']['city']:NULL ))."',
+                        '".addslashes((isset($data['location']['state']) ? $data['location']['state']:NULL ))."',
+                        '".addslashes((isset($data['location']['country']) ? $data['location']['country']:NULL ))."',
+                        '".addslashes((isset($data['verified']) ? $data['verified']:NULL ))."',
+                        '".addslashes((isset($data['url']) ? $data['url']:NULL ))."',
                         '".date('Y-m-d h:i:s')."' "
                     . ")";
 
@@ -138,11 +138,11 @@ class Venu extends DB {
                             (
                             '".(isset($data['venuId']) ? $data['venuId']:NULL )."',
                             '".(isset($data['id']) ? $data['id']:NULL )."',
-                            '".mysql_real_escape_string((isset($data['name']) ? $data['name']:NULL ))."',
-                            '".mysql_real_escape_string((isset($data['pluralName']) ? $data['pluralName']:NULL ))."',
-                            '".mysql_real_escape_string((isset($data['shortName']) ? $data['shortName']:NULL ))."',
-                            '".mysql_real_escape_string((isset($data['icon']['prefix']) ? $data['icon']['prefix']:NULL ))."',
-                            '".mysql_real_escape_string((isset($data['icon']['suffix']) ? $data['icon']['suffix']:NULL ))."')";
+                            '".addslashes((isset($data['name']) ? $data['name']:NULL ))."',
+                            '".addslashes((isset($data['pluralName']) ? $data['pluralName']:NULL ))."',
+                            '".addslashes((isset($data['shortName']) ? $data['shortName']:NULL ))."',
+                            '".addslashes((isset($data['icon']['prefix']) ? $data['icon']['prefix']:NULL ))."',
+                            '".addslashes((isset($data['icon']['suffix']) ? $data['icon']['suffix']:NULL ))."')";
 
                 $stmt = $this->pdo->prepare($query);
 
